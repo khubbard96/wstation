@@ -8,7 +8,7 @@ cache:
 script: 
     - yarn package --linux
 after_success:
-    - ls -a
+    - ls release
     - sh scripts/push.sh
 env:
   global:
