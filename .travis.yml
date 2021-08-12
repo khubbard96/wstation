@@ -5,6 +5,12 @@ yarn: "1.22.11"
 cache:
     yarn: true
 
+  # whitelist
+branches:
+  only:
+    - master
+before_install:
+  - git checkout master
 script: 
     - yarn package --linux
 after_success:
