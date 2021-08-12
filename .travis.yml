@@ -1,0 +1,13 @@
+language: node_js
+node_js: "14.17.4"
+
+cache:
+    yarn: true
+
+script: 
+    - yarn package
+after_success:
+    - sh scripts/push.sh
+env:
+  global:
+    - secure: TKaMi/LwE/5+9jK2YrSZkrsoCJvyFybb91CcJX0DzRz1HFjCggPTlFkFhwdmvCTKz+fbuiEG7KmZWmn/8YrFsACMm3F7PAiq3NCxFnPBGaNlIc1fGPenuzvqDamjiqvx7UB2E0WZECjj8MPJ1q69wCaJUliSnJTFpznOCYAxTk5QH+znRgdZgbqF0unl6diM+kFPFQ4RT7iKva5yNDln2kK2H0dc4uWC31aur3IoRCwfvOtn72DrZnKiwRyApAEGxoB3fGHhk3k4xKFKrl45ws2QztRBZ59G7lm/0AwqsOZoHf7AO/DbiNmQyJt02qLmBu4NgUWZq6mMG/jWKJl7eeTY+Bho2xnfUjRh4kWCoqrgWLZXOCX7PuCwZ8bYjCMkYld5FQ/QYumfetb5drloOx4uEHAy2a533xNX/21jjiUhAyu1bjf6ds8RnU5anmZY3vvSI1NKuqkVxauH4f1ZBUdAC+QdDzIBQn91gOxtTzWiwGtrU5HSQwHd4mfmHfelpTr49wTsWC8BEe9ytSdUcclNwz7jxI+dQ+Gv+A4bcOViUARR6Pb98rZZBMoMNLlM5tjVb4KJ9M2LVnYNLXX/kWSBNnVC8Edna5j8YrqBtjXkj4jyZjT1DdLySsS5lKbt/vT6i/5QdZ0xUUwiexcSyrHXDlesCGt5KzeeaYyE9sA=
