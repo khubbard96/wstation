@@ -12,7 +12,7 @@ branches:
 before_install:
   - git checkout master
 script: 
-    - yarn package --linux
+    - yarn package --linux target=tar.gz
 after_success:
     - ls release
     - sh scripts/push.sh
