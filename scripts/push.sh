@@ -9,7 +9,7 @@ commit_website_files() {
   git remote set-url origin https://${GH_TOKEN}@github.com/khubbard96/wstation.git > /dev/null 2>&1
   git push origin --delete deploy
   git checkout -b deploy
-  git add release/*.AppImage
+  git add -f release/*.AppImage
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
